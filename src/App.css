@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  height: 300vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  scroll-margin: 0;
+  scroll-padding: 0;
 }
 
 .App-logo {
@@ -36,3 +43,11 @@
     transform: rotate(360deg);
   }
 }
+
+.font-face-gm {
+  font-family: "SoraBold";
+ }
+
+ .font-face-gm-semi {
+  font-family: "SoraSemiBold";
+ }

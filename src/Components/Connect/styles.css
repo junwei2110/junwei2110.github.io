@@ -1,0 +1,118 @@
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    width: 90vw;
+    position: absolute;
+    top: calc(200vh + 80px);
+    left: 5vw;
+}
+
+.connect-background {
+    display: flex;
+    flex: 9;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.6)), url("../../assets/images/contactpage-background.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-background-icon-container::before {
+    content: "Just come and say Hi!";
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+
+.connect-footer {
+    display: flex;
+    flex: 1;
+    background: #282c34;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.email-modal-overlay {
+    height: 100vh;
+    width: 100vw;
+    left: -5vw;
+    top: -80px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 999;
+}
+
+.email-modal-form {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+    background-color: #282c34;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+.email-modal-header {
+    width: 100%;
+}
+
+.email-modal-input {
+    width: 80%;
+    margin-bottom: 1vh;
+    min-height: 3vh;
+    padding: 0 1vw;
+    
+    overflow: auto;
+    border-radius: 10px;
+}
+
+#sender-email {
+    flex: 1
+}
+
+#email-subject {
+    flex: 1
+}
+
+#email-body {
+    flex: 6;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.cross-btn {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+
+}
+
+.email-icon {
+    cursor: pointer;
+}
+
+.cross-btn:hover {
+    cursor: pointer;
+}
+
+.submit-btn {
+    margin-bottom: 3vh;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+

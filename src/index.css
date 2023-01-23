@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "SoraBold";
+  src: local("SoraBold"),
+   url("./assets/fonts/Sora-Bold.ttf") format("truetype");
+  font-weight: bold;
+  }
+
+@font-face {
+  font-family: "SoraSemiBold";
+  src: local("SoraSemiBold"),
+    url("./assets/fonts/Sora-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  }

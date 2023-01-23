@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 90vw;
+    background-color: #282c34;
+    align-items: center;
+    position: fixed;
+    left: 5vw;
+    z-index: 99
+}
+
+.icon {
+    display: flex;
+    flex: 3;
+    justify-content: flex-start;
+    margin-left: 10vw;
+    
+}
+
+.linkContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    font-size: 25px;
+    margin-right: 10vw;
+}
+
+.link {
+    display: flex;
+    flex: 1;
+    color: white;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.link:hover {
+    color:aqua;
+    cursor: pointer;
+}

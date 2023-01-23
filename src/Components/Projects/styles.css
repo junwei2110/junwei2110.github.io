@@ -1,0 +1,125 @@
+.projects-overall-container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: calc(100vh - 80px);
+    position: absolute;
+    left: 5vw;
+    top: calc(100vh + 80px);
+    background-color:#F5F5F5;
+
+}
+
+.projects-title {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: #282c34;
+}
+
+.projects-container {
+    flex: 8;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    width: 70vw;
+    position: relative;
+    left: 10vw;
+}
+
+.individual-project-grid {
+    display: inline-grid;
+    padding: 20px;
+    justify-content: center;
+    height: 70vh;
+    background-color:#F5F5F5;
+    
+}
+
+
+.project-tile-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    width: 20vw;
+}
+
+/*.project-tile-title {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px black solid;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}*/
+
+.project-tile-image {
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 1vh;
+  
+}
+
+.project-tile-desc {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    justify-content: center;
+  
+}
+
+.project-desc-title {
+    display: flex;
+    flex: 1;
+    font-size: 1em;
+    font-weight: bold;
+    background-color:#282c34;
+    color: white;
+    overflow: visible;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.project-desc-body {
+    flex: 2;
+    padding: 10px;
+    background-color: #F5F5DC;
+}
+
+.project-desc-techstack {
+    display: flex;
+    flex: 4;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+.techstack-skill {
+    flex-basis: 50%;
+    border: 0.1px black solid;
+    border-radius: 5px;
+    padding: 5px 0 5px 0;
+    overflow: hidden;
+    background-color: #FADADD;
+    font-weight: 500;
+    font-size: 0.8em;
+    box-sizing: border-box;
+    max-width: calc(50% - 2.5px);
+}
+
+/* Use of flex-basis and max-width: the max-width acts as a upper limit of the flex-basis property! */
+/* Use of box-sizing: when you use border-box, you are taking reference of the obj starting from the borders (including padding and border width) as compared to just
+using the content box */

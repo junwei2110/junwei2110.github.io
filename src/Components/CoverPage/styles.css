@@ -1,0 +1,240 @@
+.cover-page-container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    position: relative;
+    top: 80px;
+    left: 5vw;
+    height: calc(100vh - 80px);
+
+}
+
+.cover-picture {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
+    background: white;
+    border: .1px black solid;
+    border-bottom: none;
+    border-top: none;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("../../assets/images/coverpage-background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.image-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 2vw;
+
+}
+
+@keyframes imageSlideshow {
+    0%,100%  {
+        opacity: 1;
+        background-image: url("../../assets/images/profilepic_japan.png");
+    }
+    40% {
+        opacity: 1;
+        background-image: url("../../assets/images/profilepic_japan.png");
+    }
+    45% {
+        opacity: 0;
+        background-image: url("../../assets/images/profilepic_japan.png");
+    }
+    46% {
+        opacity: 0;
+        background-image: url("../../assets/images/profilepic_linkedin.png");
+    }
+    50% {
+        opacity: 1;
+        background-image: url("../../assets/images/profilepic_linkedin.png");
+    }
+    90% {
+        opacity: 1;
+        background-image: url("../../assets/images/profilepic_linkedin.png");
+    }
+    95% {
+        opacity: 0;
+        background-image: url("../../assets/images/profilepic_linkedin.png");
+    }
+    96% {
+        opacity: 0;
+        background-image: url("../../assets/images/profilepic_japan.png");
+    }
+
+  }
+
+#profilepic {
+    display: flex;
+    border: 1px black solid;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    animation: imageSlideshow 20s infinite; 
+
+}
+
+.image-wording-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 2vw;
+}
+
+.image-details {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(255,255,255,0.6);
+    max-width: fit-content;
+}
+
+#image-name { 
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#image-job {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#button-1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 15px;
+    border: 2px black solid;
+    border-radius: 10px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-1-text {
+    display: flex;
+    flex: 3;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin-right: 10px;
+}
+
+#button-1-icon {
+    display: flex;
+    flex: 1
+}
+
+#button-2 {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px black solid;
+    border-radius: 10px;
+    background: white;
+
+}
+
+
+
+#button-1:hover {
+    cursor: pointer;  
+    background: aqua;  
+}
+
+#button-2:hover {
+    cursor: pointer;   
+    background: aqua; 
+}
+
+a:link { text-decoration: none; color: black; }
+
+
+a:visited { text-decoration: none; color: black; }
+
+
+a:hover { text-decoration: none; color: black; }
+
+
+a:active { text-decoration: none; color: black; }
+
+
+
+
+.cover-desc {
+    display: flex;
+    flex: 1;
+    background: #282c34;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    overflow: visible;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+}
+
+.overlay {
+    position: absolute;
+    top: -80px;
+    left: -5vw;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(40, 44, 52, 0.6);
+    z-index: 999;
+}
+
+.dropdown {
+    border: 1px black solid;
+    border-radius: 10px;
+    z-index: 1000;
+    background: white;
+}
+
+.dropdownlist {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.dropdownComponent {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    border-bottom: 0.1px black solid;
+}
+
+.dropdownComponent:hover {
+    cursor: pointer;   
+    font-weight: bold; 
+}
+
+.dropdowndesc {
+    flex: 3;
+    white-space: nowrap;
+    text-overflow: clip;
+    justify-content: flex-start;
+}
+
+.dropdownicon {
+    flex: 1;
+}
+
+.firstComponent {
+    margin-top: 0.5em;
+}
+
+.lastComponent {
+    margin-bottom: 0.5em;
+    border-bottom: none;
+}
