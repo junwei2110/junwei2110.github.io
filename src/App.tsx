@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       <Navbar navigateToPage={navigateToPage} />
-        <CoverPage />
+        <CoverPage navigateToPage={navigateToPage} />
         <Projects />
         <Connect />
     </div>

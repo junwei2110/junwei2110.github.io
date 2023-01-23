@@ -238,3 +238,41 @@ a:active { text-decoration: none; color: black; }
     margin-bottom: 0.5em;
     border-bottom: none;
 }
+
+@media only screen and (max-width: 1000px) {
+    .cover-page-container {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        width: 100vw;
+        position: relative;
+        top: 80px;
+        height: calc(100vh - 80px);
+    
+    }
+    .cover-picture {
+        flex-direction: column;
+        padding: 2vh 0;
+
+    }
+
+    .image-container {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    #profilepic {
+        height: 250px;
+        width: 250px;
+    }
+
+    .image-wording-details {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .overlay {
+        left: 0;
+    } 
+
+}

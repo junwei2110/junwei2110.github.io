@@ -114,5 +114,62 @@ a:hover {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 1000px) {
+    .connect-container {
+        left: 0;
+        width: 100vw;
+    
+    }
 
+    .connect-background-icon-container {
+        padding: 0 1vw;
+    }
+
+    .connect-background-icon-container::before {
+        content: "Just come and say Hi!";
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 2vh;
+    }
+
+
+    .email-modal-overlay {
+        left: 0;
+    }
+    
+    .email-modal-form {
+        height: 70vh;
+        width: 90vw;
+        
+    } 
+    
+}
+
+
+@media only screen and (max-width: 450px) {
+    
+    .email-modal-form {
+        height: 80vh;
+        width: 100vw;
+        
+    } 
+
+    .email-modal-header {
+        width: 80%;
+    }
+
+    .email-modal-input {
+        width: 90%;
+    
+    }
+
+    .cross-btn {
+        position: absolute;
+        top: 1vh;
+        left: 5vw;
+    
+    }
+    
+}
 

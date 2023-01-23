@@ -7,7 +7,9 @@ import { coverStory } from '../../userInput';
 
 
 
-export default function CoverPage() {
+export default function CoverPage({navigateToPage} : {
+    navigateToPage: (val: number) => void;
+}) {
 
     const buttonDropdownRef = useRef<HTMLDivElement | null>(null);
     
@@ -73,7 +75,7 @@ export default function CoverPage() {
                     className={"dropdown"}
                     style={{ position: "absolute", top: dropdownPos[0], left: dropdownPos[1], width: dropdownPos[2] }}
                     >
-                        <DropDownTable showDropdown={removeDropdown} />  
+                        <DropDownTable showDropdown={removeDropdown} navigateToPage={navigateToPage} />  
                     </div>
                 </>
                 : null}
@@ -87,18 +89,13 @@ export default function CoverPage() {
 }
 
 
-const DropDownTable = ({showDropdown} : {
+const DropDownTable = ({showDropdown, navigateToPage} : {
     showDropdown: () => void;
+    navigateToPage: (val: number) => void;
 }) => {
-    const navigateTo = (pageNo: number) => {
-        scroll.scrollTo(window.innerHeight*pageNo, { 
-            smooth: true, 
-            delay: 0, 
-            duration: 300 
-        });
-    };
+
     const handleOnClick = (pageNo: number) => {
-        navigateTo(pageNo);
+        navigateToPage(pageNo);
         showDropdown();
 
     }

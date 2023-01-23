@@ -99,7 +99,7 @@ const EmailModal = ({ handleModal } : {
             >
                 <ImCross className={"cross-btn"} size={20} color={"white"} onClick={() => handleModal(false)} />
                 <h1 className={"email-modal-header"} style={{ color: "white" }}>Send me an email!</h1>
-                <input className={"email-modal-input"} id={"sender-email"} name={"from_name"} onChange={handleChange} value={emailParams.from_name} placeholder={"Enter your email address here so I know who to reply!"} type={"email"} required />
+                <input className={"email-modal-input"} id={"sender-email"} name={"from_name"} onChange={handleChange} value={emailParams.from_name} placeholder={"Enter your email address"} type={"email"} required />
                 <input className={"email-modal-input"} id={"email-subject"} name={"email_subject"} onChange={handleChange} value={emailParams.email_subject} placeholder={"Enter your email subject here"} />
                 <textarea className={"email-modal-input"} id={"email-body"} name={"message"} onChange={handleChange} value={emailParams.message} placeholder={"Enter your email here"} />
                 <button type={"submit"} className={"submit-btn"}>Submit</button>

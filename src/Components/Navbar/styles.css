@@ -40,3 +40,30 @@
     color:aqua;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        left: 0;
+        top: 0;
+        height: 80px;
+        width: 100vw;
+        background-color: #282c34;
+        align-items: center;
+        z-index: 99;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+
+    }
+
+    .icon {
+        display: none;   
+    }
+    .linkContainer {
+        margin-right: 0;
+    }
+    .link {
+        margin: 0;
+    }
+
+
+}
