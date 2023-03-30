@@ -1,13 +1,25 @@
 import React from "react";
 import { FaRocket } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
 
-const linkArr = ["About", "Projects", "Connect"];
+const linkArr = ["About", "Projects", "Connect", "Joanne"];
 
 export const Navbar = ({navigateToPage} : {
     navigateToPage: (val: number) => void;
 }) => {
+
+    const navigate = useNavigate();
+
+    const navigationLink = (idx: number) => {
+        if (idx < 3) {
+            navigate("/");
+            navigateToPage(idx);
+        } else {
+            navigate("/Joanne");
+        }
+    }
 
     return (
         <div className={"navbar"}>
@@ -19,7 +31,7 @@ export const Navbar = ({navigateToPage} : {
                     <div 
                     key={idx}
                     className={"link"} 
-                    onClick={() => navigateToPage(idx)}>
+                    onClick={() => navigationLink(idx)}>
                         {navLink}
                     </div>
                 ))}

@@ -1,10 +1,13 @@
 import './App.css';
 import React, { useEffect, useState, MutableRefObject, useRef } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
 import { Navbar } from './Components/Navbar';
 import CoverPage from './Components/CoverPage';
 import Projects from './Components/Projects';
 import Connect from './Components/Connect';
+import { Blog } from './Components/Blog';
+
 
 function App() {
 
@@ -57,12 +60,27 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar navigateToPage={navigateToPage} />
-        <CoverPage navigateToPage={navigateToPage} />
-        <Projects />
-        <Connect />
-    </div>
+        <Routes>
+          <Route 
+          path="/"  
+          element={
+            <div className="App">
+              <CoverPage navigateToPage={navigateToPage} />
+              <Projects />
+              <Connect />
+            </div>
+          }
+          />
+          <Route 
+          path="/Joanne"  
+          element={
+            <Blog />
+          }
+          />
+        </Routes>    
+    </BrowserRouter>
   );
 }
 
