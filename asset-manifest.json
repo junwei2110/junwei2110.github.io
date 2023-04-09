@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b51018d7.css",
-    "main.js": "/static/js/main.8755f203.js",
+    "main.css": "/static/css/main.75f12dcd.css",
+    "main.js": "/static/js/main.f65c98ef.js",
     "static/js/787.45612d96.chunk.js": "/static/js/787.45612d96.chunk.js",
     "static/media/coverpage-background.png": "/static/media/coverpage-background.fead5523c0bb955fb15d.png",
     "static/media/contactpage-background.png": "/static/media/contactpage-background.8b0ff5998ae86ffca3d5.png",
@@ -13,12 +13,12 @@
     "static/media/Sora-SemiBold.ttf": "/static/media/Sora-SemiBold.b639463bbd3a7e7c31f2.ttf",
     "static/media/Sora-Bold.ttf": "/static/media/Sora-Bold.4473853965a9d49c11d9.ttf",
     "index.html": "/index.html",
-    "main.b51018d7.css.map": "/static/css/main.b51018d7.css.map",
-    "main.8755f203.js.map": "/static/js/main.8755f203.js.map",
+    "main.75f12dcd.css.map": "/static/css/main.75f12dcd.css.map",
+    "main.f65c98ef.js.map": "/static/js/main.f65c98ef.js.map",
     "787.45612d96.chunk.js.map": "/static/js/787.45612d96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b51018d7.css",
-    "static/js/main.8755f203.js"
+    "static/css/main.75f12dcd.css",
+    "static/js/main.f65c98ef.js"
   ]
 }
