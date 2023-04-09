@@ -1,13 +1,13 @@
-.cover-page-container {
+/* .cover-page-container {
     display: flex;
     flex-direction: column;
     width: 90vw;
-    position: relative;
+    position: absolute;
     top: 80px;
     left: 5vw;
     height: calc(100vh - 80px);
 
-}
+} */
 
 .cover-picture {
     display: flex;
@@ -172,15 +172,12 @@ a:active { text-decoration: none; color: black; }
     flex: 1;
     background: #282c34;
     color: white;
-    justify-content: center;
+    padding: 2vh 10vw 2vh 10vw;
+    font-size: 20px;
     align-items: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    overflow: visible;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-
+    justify-content: center;
 }
+
 
 .overlay {
     position: absolute;
@@ -240,7 +237,7 @@ a:active { text-decoration: none; color: black; }
 }
 
 @media only screen and (max-width: 1000px) {
-    .cover-page-container {
+    /* .cover-page-container {
         display: flex;
         flex-direction: column;
         left: 0;
@@ -249,7 +246,7 @@ a:active { text-decoration: none; color: black; }
         top: 80px;
         height: calc(100vh - 80px);
     
-    }
+    } */
     .cover-picture {
         flex-direction: column;
         padding: 2vh 0;
@@ -273,6 +270,15 @@ a:active { text-decoration: none; color: black; }
     
     .overlay {
         left: 0;
-    } 
+    }
+    
+    .cover-desc {
+        display: block;
+        padding: 1vh 3vw 1vh 3vw;
+        overflow: auto;
+        font-size: 15px;
+    
+    }
+
 
 }

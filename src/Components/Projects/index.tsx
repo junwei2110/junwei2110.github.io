@@ -12,7 +12,7 @@ type ProjectArrayDesc = {
 export default function Projects() {
 
     return (
-        <div className={"projects-overall-container"}>
+        <>
             <div className={"projects-title"}>My Featured Picks</div>
             <div className={"projects-container"}>
                 {projectArray.map((project, idx) => (
@@ -22,7 +22,7 @@ export default function Projects() {
                 ))}
 
             </div>
-        </div>
+        </>
     )
 }
 

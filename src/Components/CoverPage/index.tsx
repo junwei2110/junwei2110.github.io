@@ -7,32 +7,30 @@ import { coverStory } from '../../userInput';
 
 
 
-export default function CoverPage({navigateToPage} : {
-    navigateToPage: (val: number) => void;
-}) {
+export default function CoverPage() {
 
     const buttonDropdownRef = useRef<HTMLDivElement | null>(null);
     
     const [showDropdown, setShowDropdown] = useState(false);
     const [dropdownPos, setDropdownPos] = useState<number[]>([]);
 
-    const handleKnowMore = () => {
-        const divRef = buttonDropdownRef.current;
-        if (divRef) {
-            setDropdownPos([divRef.offsetTop + divRef.offsetHeight, divRef.offsetLeft, divRef.offsetWidth]);
-        }
-        setShowDropdown((state) => !state);
-        document.body.style.overflow = "hidden";
-    }
+    // const handleKnowMore = () => {
+    //     const divRef = buttonDropdownRef.current;
+    //     if (divRef) {
+    //         setDropdownPos([divRef.offsetTop + divRef.offsetHeight, divRef.offsetLeft, divRef.offsetWidth]);
+    //     }
+    //     setShowDropdown((state) => !state);
+    //     document.body.style.overflow = "hidden";
+    // }
 
-    const removeDropdown = () => {
-        setShowDropdown(false);
-        document.body.style.overflow = "auto";
+    // const removeDropdown = () => {
+    //     setShowDropdown(false);
+    //     document.body.style.overflow = "auto";
 
-    }
+    // }
 
     return (
-        <div className={"cover-page-container"}>
+        <>
             <div className={"cover-picture"}>
                 <div className={"image-container"}>
                     <div id={"profilepic"} />
@@ -45,7 +43,7 @@ export default function CoverPage({navigateToPage} : {
                         Front-End Software Engineer
                     </div>
                     <div id={"image-buttons"} className={"image-details"}>
-                        <div id={"button-1"} 
+                        {/* <div id={"button-1"} 
                         style={{ background: showDropdown ? "aqua" : "white"}}
                         ref={buttonDropdownRef} 
                         onClick={handleKnowMore}>
@@ -60,15 +58,15 @@ export default function CoverPage({navigateToPage} : {
                                 }
                             </div>                            
                               
-                        </div>
+                        </div> */}
              
-                        <a id={"button-2"} href={"/Resume_Ng Jun Wei_Feb 2022.pdf"} download>
+                        <a id={"button-2"} href={"/Resume_Ng Jun Wei_Mar 2023.pdf"} download>
                             Resume       
                         </a>
           
                     </div>
                 </div>
-                {showDropdown ?
+                {/* {showDropdown ?
                 <>
                     <div className={"overlay"} onClick={removeDropdown} /> 
                     <div 
@@ -78,13 +76,13 @@ export default function CoverPage({navigateToPage} : {
                         <DropDownTable showDropdown={removeDropdown} navigateToPage={navigateToPage} />  
                     </div>
                 </>
-                : null}
+                : null} */}
             </div>
             <div className={"cover-desc"}>
                 {coverStory}
             </div>
 
-        </div>
+        </>
     )
 }
 

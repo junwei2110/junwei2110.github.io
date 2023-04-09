@@ -1,4 +1,4 @@
-.connect-container {
+/* .connect-container {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 80px);
@@ -6,7 +6,7 @@
     position: absolute;
     top: calc(200vh + 80px);
     left: 5vw;
-}
+} */
 
 .connect-background {
     display: flex;
@@ -115,11 +115,11 @@ a:hover {
 }
 
 @media only screen and (max-width: 1000px) {
-    .connect-container {
+    /* .connect-container {
         left: 0;
         width: 100vw;
     
-    }
+    } */
 
     .connect-background-icon-container {
         padding: 0 1vw;

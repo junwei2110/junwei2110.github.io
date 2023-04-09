@@ -4,21 +4,28 @@ import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
 
-const linkArr = ["About", "Projects", "Connect", "Joanne"];
+const linkArr = ["About", "Projects", "Connect"] //, "Joanne"];
 
 export const Navbar = ({navigateToPage} : {
     navigateToPage: (val: number) => void;
 }) => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const navigationLink = (idx: number) => {
-        if (idx < 3) {
-            navigate("/");
+        // if (idx < 3) {
+        //     navigate("/");
+        //     navigateToPage(idx);
+        // } else {
+        //     navigate("/Joanne");
+        // }
+        // navigate("/");
+
+        navigateToPage(idx);
+
+        setTimeout(() => {
             navigateToPage(idx);
-        } else {
-            navigate("/Joanne");
-        }
+        }, 400);
     }
 
     return (

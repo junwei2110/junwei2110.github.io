@@ -1,0 +1,60 @@
+.App {
+    text-align: center;
+    height: 300vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    scroll-margin: 0;
+    scroll-padding: 0;
+}
+
+.cover-page-div {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    position: absolute;
+    left: 5vw;
+    height: calc(100vh - 80px);
+
+}
+
+.cover-page-container {
+    top: 80px;
+}
+
+.projects-overall-container {
+    top: calc(100vh + 80px) !important;
+    
+}
+
+.connect-container {
+    top: calc(200vh + 80px) !important;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .cover-page-container {
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        width: 100vw;
+        position: relative;
+        top: 80px;
+        height: calc(100vh - 80px);
+    
+    }
+
+    .projects-overall-container {
+        left: 0;
+        width: 100vw;
+    
+    }
+
+    .connect-container {
+        left: 0;
+        width: 100vw;
+    
+    }
+}

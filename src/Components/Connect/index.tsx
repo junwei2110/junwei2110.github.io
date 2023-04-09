@@ -21,7 +21,7 @@ export default function Connect() {
     }
 
     return (
-        <div className={"connect-container"}>
+        <>
             <div className={"connect-background"}>
                 <div className={"connect-background-icon-container"}>
                     <a href={linkedinUrl}>
@@ -39,7 +39,7 @@ export default function Connect() {
             </div>
             <div className={"connect-footer"}></div>
             {emailModal ? <EmailModal handleModal={handleModal} /> : null}
-        </div>
+        </>
     )
 }
 
