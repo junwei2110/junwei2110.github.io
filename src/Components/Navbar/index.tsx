@@ -20,12 +20,7 @@ export const Navbar = ({navigateToPage} : {
         //     navigate("/Joanne");
         // }
         // navigate("/");
-
         navigateToPage(idx);
-
-        setTimeout(() => {
-            navigateToPage(idx);
-        }, 400);
     }
 
     return (

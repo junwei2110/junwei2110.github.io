@@ -35,9 +35,10 @@ const ProjectTile = ({title, imgUrl, desc} : {
 
     return (
         <div className={"project-tile-container"}>
-            <div 
+            <img 
             className={"project-tile-image"} 
             style={{ backgroundImage: `url(${imgUrl})` }}
+            loading={"lazy"}
             />
                 
             <div className={"project-tile-desc"}>

@@ -33,7 +33,7 @@ export default function CoverPage() {
         <>
             <div className={"cover-picture"}>
                 <div className={"image-container"}>
-                    <div id={"profilepic"} />
+                    <img id={"profilepic"} loading={"lazy"} />
                 </div>
                 <div className={"image-wording-details"}>
                     <div id={"image-name"} className={"image-details font-face-gm"}>

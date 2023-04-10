@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll, Events } from 'react-scroll';
 import { Navbar } from './Components/Navbar';
 import CoverPageOverall from './Components/CoverPageOverall';
 import { Blog } from './Components/Blog';
@@ -11,7 +11,7 @@ function App() {
 
   // const [windowPos, setWindowPos] = useState(0);
   const [disableScroll, setDisableScroll] = useState(true);
-  const [targetPage, setTargetPage] = useState(0);
+  // const [targetPage, setTargetPage] = useState(0);
   // const firstRender = useRef(true);\
 
   // const coverPageParentRef = useRef<any>(null);
@@ -26,9 +26,19 @@ function App() {
 
     
     // return () => window.removeEventListener("scroll", handleWindowPos);
-    scroll.scrollTo(0, { smooth: true, delay: 0, duration: 100 });
-    
+
+    Events.scrollEvent.register("end", () => {
+      window.disableScrollNav = false;
+    });
+    return () => {
+      Events.scrollEvent.remove("end");
+    }
+
   }, []);
+
+  useEffect(() => {
+    scroll.scrollToTop({ smooth: true, delay: 0, duration: 300 });
+  }, [])
 
   // useEffect(() => {
   //   navigateFromScroll();
@@ -59,12 +69,21 @@ function App() {
   const navigateToPage = (pageNo: number) => { 
     // setTargetPage(pageNo);
     // setDisableScroll(true);
+    if (!window.disableScrollNav) {
+      scroll.scrollTo(window.innerHeight*pageNo, { smooth: true, delay: 0, duration: 300 });
+    }
+    
+  };
+
+  const navigateFromNavBar = (pageNo: number) => {
+    window.disableScrollNav = true;
     scroll.scrollTo(window.innerHeight*pageNo, { smooth: true, delay: 0, duration: 300 });
+
   };
 
   return (
     <BrowserRouter>
-      <Navbar navigateToPage={navigateToPage} />
+      <Navbar navigateToPage={navigateFromNavBar} />
         <Routes>
           <Route 
           path="/"  

@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+declare global {
+    interface Window {
+      disableScrollNav: boolean
+    }
+}
+
+window.disableScrollNav = true;
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(<App />);
 

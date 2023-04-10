@@ -261,15 +261,21 @@ a:active { text-decoration: none; color: black; }
     #profilepic {
         height: 250px;
         width: 250px;
+        margin-bottom: 10px;
     }
 
     .image-wording-details {
         justify-content: center;
-        align-items: center;
+        align-items: center; 
+
     }
     
     .overlay {
         left: 0;
+    }
+
+    #image-name { 
+        margin-bottom: 10px;
     }
     
     .cover-desc {
@@ -277,6 +283,7 @@ a:active { text-decoration: none; color: black; }
         padding: 1vh 3vw 1vh 3vw;
         overflow: auto;
         font-size: 15px;
+        flex: 3;
     
     }
 
